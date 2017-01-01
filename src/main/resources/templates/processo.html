@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Sofia</title>
+
+		<!-- BEGIN META -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="keywords" content=""/>
+		<meta name="description" content=""/>
+		<!-- END META -->
+
+		<!-- BEGIN STYLESHEETS -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+		<link type="text/css" rel="stylesheet" href="css/theme-default/bootstrap.css?1422792965" />
+		<link type="text/css" rel="stylesheet" href="css/theme-default/materialadmin.css?1425466319" />
+		<link type="text/css" rel="stylesheet" href="css/theme-default/font-awesome.min.css?1422529194" />
+		<link type="text/css" rel="stylesheet" href="css/theme-default/material-design-iconic-font.min.css?1421434286" />
+		<link type="text/css" rel="stylesheet" href="css/theme-default/libs/DataTables/jquery.dataTables.css?1423553989" />
+		<link type="text/css" rel="stylesheet" href="css/theme-default/libs/DataTables/extensions/dataTables.colVis.css?1423553990" />
+		<link type="text/css" rel="stylesheet" href="css/theme-default/libs/DataTables/extensions/dataTables.tableTools.css?1423553990" />
+		<!-- END STYLESHEETS -->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/libs/utils/html5shiv.js?1403934957"></script>
+		<script type="text/javascript" src="js/libs/utils/respond.min.js?1403934956"></script>
+		<![endif]-->
+	</head>
+	<body class="menubar-hoverable header-fixed">
+
+		<!-- BEGIN HEADER-->
+		<header id="header" >
+			<div class="headerbar">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="headerbar-left">
+					<ul class="header-nav header-nav-options">
+						<li class="header-nav-brand" >
+							<div class="brand-holder">
+								<a href="../../html/search.html">
+									<div class="tile-icon">
+										<img src="img/logo-topo52.png" alt="" />
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="headerbar-right">
+					<ul class="header-nav header-nav-options">
+						<li>
+							<!-- Search form -->
+							<form class="navbar-search" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" name="headerSearch" placeholder=""/>
+								</div>
+								<button type="submit" class="btn btn-icon-toggle ink-reaction"><i class="fa fa-search"></i></button>
+							</form>
+						</li>
+						<li class="dropdown hidden-xs">
+							<a href="javascript:void(0);" class="btn btn-icon-toggle btn-default" data-toggle="dropdown">
+								<i class="fa fa-bell"></i><sup class="badge style-danger">4</sup>
+							</a>
+							<ul class="dropdown-menu animation-expand">
+								<li class="dropdown-header">Feed</li>
+								<li>
+									<a class="alert alert-callout alert-warning" href="javascript:void(0);">
+										<strong>Novo Andamento</strong><br/>
+										<strong>26/06/16 - 19:39</strong><br/>
+										<small>Sicrano Souza x Company Y Co</small>
+									</a>
+								</li>
+								<li>
+									<a class="alert alert-callout alert-info" href="javascript:void(0);">
+										<strong>Novo Andamento</strong><br/>
+										<strong>26/06/16 - 17:59</strong><br/>
+										<small>Empresa S.A x Fulano Silva</small>
+									</a>
+								</li>
+							</ul><!--end .dropdown-menu -->
+						</li><!--end .dropdown -->
+						<li class="dropdown hidden-xs">
+							<a href="javascript:void(0);" class="btn btn-icon-toggle btn-default" data-toggle="dropdown">
+								<i class="fa fa-area-chart"></i>
+							</a>
+							<ul class="dropdown-menu animation-expand">
+								<li class="dropdown-header">Armazenamento</li>
+								<li class="dropdown-progress">
+									<a href="javascript:void(0);">
+										<div class="dropdown-label">
+											<span class="text-light">Espaço utilizado</span>
+											<strong class="pull-right">93%</strong>
+										</div>
+										<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 93%"></div></div>
+									</a>
+								</li><!--end .dropdown-progress -->
+							</ul><!--end .dropdown-menu -->
+						</li><!--end .dropdown -->
+					</ul><!--end .header-nav-options -->
+					<ul class="header-nav header-nav-profile">
+						<li class="dropdown">
+							<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+								<span class="profile-info">
+									Antonio Alves
+									<small>Administrador</small>
+								</span>
+							</a>
+							<ul class="dropdown-menu animation-dock">
+								<li><a href="../../html/pages/profile.html">Conta</a></li>
+								<li class="divider"></li>
+								<li><a href="../../html/pages/locked.html"><i class="fa fa-fw fa-lock"></i> Travar Tela</a></li>
+								<li><a href="../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Sair</a></li>
+							</ul><!--end .dropdown-menu -->
+						</li><!--end .dropdown -->
+					</ul><!--end .header-nav-profile -->
+					<ul class="header-nav header-nav-toggle">
+						<li>
+							<a class="btn btn-icon-toggle btn-default" href="#offcanvas-search" data-toggle="offcanvas" data-backdrop="false">
+								<i class="fa fa-leanpub"></i>
+							</a>
+						</li>
+					</ul><!--end .header-nav-toggle -->
+				</div><!--end #header-navbar-collapse -->
+			</div>
+		</header>
+		<!-- END HEADER-->
+
+		<!-- BEGIN BASE-->
+		<div id="base">
+
+			<!-- BEGIN OFFCANVAS LEFT -->
+			<div class="offcanvas">
+			</div><!--end .offcanvas-->
+			<!-- END OFFCANVAS LEFT -->
+
+			<!-- BEGIN CONTENT-->
+			<div id="content">
+				<section class="style-default-bright">
+					<div class="section-header">
+						<div class="col-md-6">
+							<h2 class="text-primary">0011664-71.2013.8.26.0002 (1ª Instância) 
+							</h2>
+							
+						</div>
+						<div class="col-md-6">
+					<div class="btn-toolbar float-right" role="toolbar">
+						<div class="btn-group">
+												<a class="btn btn-floating-action btn-primary" href="javascript:void(0);" onclick="javascript:window.print();"><i class="md md-print"></i></a>
+												<a class="btn btn-floating-action btn-primary"><i class="md md-attachment"></i></a>
+												<a class="btn btn-floating-action btn-primary"><i class="md md-share"></i></a>
+												<a class="btn btn-floating-action btn-primary"><i class="md md-delete"></i></a>
+												<a class="btn btn-floating-action btn-primary"><i class="md md-autorenew"></i></a>
+
+						</div>
+
+                      </div>
+						</div>
+
+					</div>
+					<div class="section-body">
+
+						<!-- BEGIN DATATABLE 1 -->
+
+						<div class="row">
+												<div class="card-body style-default-bright col-sm-9">
+
+												</div><!--end .col -->
+											</div>
+
+
+						
+
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="card card-bordered style-primary">
+									<div class="card-head">
+										<div class="tools">
+											<div class="btn-group">
+												<a class="btn btn-icon-toggle btn-refresh"><i class="md md-refresh"></i></a>
+												<a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
+												<a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
+											</div>
+										</div>
+										<header><i class="fa fa-fw fa-info"></i> Dados do Processo</header>
+									</div><!--end .card-head -->
+									<div class="card-body style-default-bright">
+
+
+										<dl class="dl-horizontal">
+											<dt>Situação</dt>
+											<dd>
+																									<label class="radio-inline radio-styled radio-success">
+														<input type="radio" name="inlineRadioOptions" value="option1"/><span>Ativo</span>
+													</label>
+													<label class="radio-inline radio-styled radio-danger">
+														<input type="radio" name="inlineRadioOptions" value="option2"/><span>Extinto</span>
+													</label>
+											</dd>
+											<dt>Número do Processo</dt>
+											<dd>0017684-71.2014.8.26.0002</dd>
+											<dt>Comarca <a href="#"><i class="fa fa-edit"></i></a></dt>
+											<dd>TJSP - São Paulo</dd>
+											<dt>Assunto <a href="#"><i class="fa fa-edit"></i></a></dt>
+											<dd>Indenização por Dano Moral</dd>
+											<dt>Outros Assuntos <a href="#"><i class="fa fa-edit"></i></a></dt>
+											<dd>Indenização por Dano Material</dd>
+											<dt>Classe <a href="#"><i class="fa fa-edit"></i></a></dt>
+											<dd>Procedimento do Juizado Especial Cível</dd>
+											<dt>Área</dt>
+											<dd>Cível</dd>
+											<dt>Distribuição</dt>
+											<dd>01/04/2016 às 12:28 - Livre</dd>
+											<dd>1ª Vara do Juizado Especial Cível - Foro Regional III - Jabaquara</dd>
+											<dt>Controle</dt>
+											<dd>2015/001241</dd>
+											<dt>Local Físico</dt>
+											<dd>-</dd>
+											<dt>Juiz(a)</dt>
+											<dd>Ana Maria de Orleans</dd>
+											<dt>Valor da Ação</dt>
+											<dd>R$ 12.000,00</dd>
+										</dl>
+									</div><!--end .card-body -->
+								</div><!--end .card -->
+					</div><!--end .section-body -->
+
+							<div class="col-md-6">
+								<div class="card card-bordered style-primary">
+												<div class="card-head">
+													<div class="tools">
+														<div class="btn-group">
+															<a class="btn btn-icon-toggle btn-refresh"><i class="md md-refresh"></i></a>
+															<a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
+															<a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
+														</div>
+													</div>
+													<header><i class="fa fa-fw fa-users"></i> Partes do Processo</header>
+												</div><!--end .card-head -->
+												<div class="card-body style-default-bright">
+													<dl class="dl-horizontal">
+														<dt>Partes</dt>
+														<dd>(Rqte) Cliente Companhia Extraida da Agenda SA</dd>
+														<dd>(Rqda) Empresa Ltda</dd>
+														<dt>Cliente</dt>
+														<dd>Cliente Companhia Extraida da Agenda SA</dd>
+														<dt>Responsável</dt>
+														<dd>Antonio Alves</dd>
+														<dt>Compartilhado com</dt>
+														<dd>Marcelo Toyoda</dd>
+														<dd>Eric Tadeu</dd>
+													</dl>
+
+												</div><!--end .card-body -->
+								</div><!--end .card -->
+							</div>
+						
+					</div><!--end .section-body -->
+
+
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card card-bordered style-primary">
+									<div class="card-head">
+										<div class="tools">
+											<div class="btn-group">
+												<a class="btn btn-icon-toggle btn-refresh"><i class="md md-refresh"></i></a>
+												<a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
+												<a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
+											</div>
+										</div>
+									</div><!--end .card-head -->
+									<div class="card-body style-default-bright">
+
+										<form class="form" role="form">
+
+											<div class="form-group floating-label">
+												<textarea name="textarea2" id="textarea2" class="form-control" rows="3" placeholder=""></textarea>
+												<label for="textarea2">Observações</label>
+											</div>
+										</form>
+
+
+									</div><!--end .card-body -->
+								</div><!--end .card -->
+
+							</div><!--end .section-body -->
+						</div><!--end .row -->
+
+
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card card-bordered style-primary">
+									<div class="card-head">
+										<div class="tools">
+											<div class="btn-group">
+												<a class="btn btn-icon-toggle btn-refresh"><i class="md md-refresh"></i></a>
+												<a class="btn btn-icon-toggle btn-collapse"><i class="fa fa-angle-down"></i></a>
+												<a class="btn btn-icon-toggle btn-close"><i class="md md-close"></i></a>
+											</div>
+										</div>
+										<header><i class="fa fa-fw fa-institution"></i> Movimentação</header>
+									</div><!--end .card-head -->
+									<div class="card-body style-default-bright">
+
+
+                <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th width="6%">Data</th>
+                      <th width="84%">Movimento</th>
+                      <th width="10%">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>20/10/2014</td>
+                      <td><h5>Serventuário</h5>
+                        <small>mesa f</small></td>
+                      <td>
+					  <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group btn-group-xs">
+                          <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-download"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-upload"></i></button>
+                        </div>
+                      </div>
+			          </td>
+					</tr>
+                    <tr>
+                      <td>06/10/2014</td>
+                      <td><h5>Certidão de Publicação Expedida</h5>
+                        <small>Relação :0354/2014 Data da Disponibilização: 06/10/2014 Data da Publicação: 07/10/2014 Número do Diário: 1748 Página: 1700/1719</small></td>
+                      <td>
+					  <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group btn-group-xs">
+                          <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-download"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-upload"></i></button>
+                        </div>
+                      </div>
+			          </td>
+					</tr>
+                    <tr>
+                      <td>03/10/2014</td>
+                      <td><h5>Remetido ao DJE</h5>
+                        <small>Relação: 0354/2014 Teor do ato: Vistos. 1. Fls. 242/246. A autora apresentou tempestivamente Embargos de Declaração alegando omissão da sentença em face de réplica protocolada mas não juntada aos autos. A serventia procedeu com a devida juntada da réplica (fls. 280). Sendo assim, houve na verdade evidente erro material na prolação da sentença, motivo pelo qual declaro sua nulidade. 2. Por consequência, resta prejudicada a apelação interposta (fls. 264/270). 3. Manifeste-se o réu, no prazo de 5 dias, sobre as alegações em réplica (fls. 222/237), principalmente no tocante à entrega incompleta dos Códigos Fontes. 4. Decorrido o prazo supra, independentemente de nova intimação, manifestem-se as partes sobre a produção de provas no prazo de 5 dias. Após, cls. Int. Advogados(s): Andre Sussumu Iizuka (OAB 154013/SP), João Cesar Cáceres (OAB 162393/SP)</small></td>
+                      <td>
+					  <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group btn-group-xs">
+                          <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-download"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-upload"></i></button>
+                        </div>
+                      </div>
+			          </td>
+					</tr>
+                    <tr>
+                      <td>01/10/2014</td>
+                      <td><h5>Decisão Proferida</h5>
+                        <small>Vistos. 1. Fls. 242/246. A autora apresentou tempestivamente Embargos de Declaração alegando omissão da sentença em face de réplica protocolada mas não juntada aos autos. A serventia procedeu com a devida juntada da réplica (fls. 280). Sendo assim, houve na verdade evidente erro material na prolação da sentença, motivo pelo qual declaro sua nulidade. 2. Por consequência, resta prejudicada a apelação interposta (fls. 264/270). 3. Manifeste-se o réu, no prazo de 5 dias, sobre as alegações em réplica (fls. 222/237), principalmente no tocante à entrega incompleta dos Códigos Fontes. 4. Decorrido o prazo supra, independentemente de nova intimação, manifestem-se as partes sobre a produção de provas no prazo de 5 dias. Após, cls. Int.</small></td>
+                      <td>
+					  <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group btn-group-xs">
+                          <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-download"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-upload"></i></button>
+                        </div>
+                      </div>
+			          </td>
+					</tr>
+                    <tr>
+                      <td>29/09/2014</td>
+                      <td><h5>Conclusos para Decisão</h5>
+                        <small>BR</small></td>
+                      <td>
+					  <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group btn-group-xs">
+                          <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-download"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-upload"></i></button>
+                        </div>
+                      </div>
+			          </td>
+					</tr>
+                          <tr>
+                      <td>29/09/2014</td>
+                      <td><h5>Certidão de Cartório Expedida</h5>
+                        <small>Certifico e dou fé que a petição informada as fls 278, já foi encartada conforme fls 242.</small></td>
+                      <td>
+					  <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group btn-group-xs">
+                          <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-download"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-upload"></i></button>
+                        </div>
+                      </div>
+			          </td>
+					</tr>
+                    <tr>
+                      <td>16/09/2014</td>
+                      <td><h5>Certidão de Publicação Expedida</h5>
+                        <small>Relação :0330/2014 Data da Disponibilização: 16/09/2014 Data da Publicação: 17/09/2014 Número do Diário: 1734 Página: 1537/1546</small></td>
+                      <td>
+					  <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group btn-group-xs">
+                          <button type="button" class="btn btn-default"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-download"></i></button>
+                          <button type="button" class="btn btn-default"><i class="fa fa-upload"></i></button>
+                        </div>
+                      </div>
+			          </td>
+					</tr>
+                  </tbody>
+                </table>
+				</div><!--end .card-body -->
+				</div><!--end .card -->
+
+						<hr class="ruler-xxl"/>
+
+				</div><!--end .section-body -->
+				</div><!--end .row -->
+				</div>
+			</section>				
+			</div><!--end #content-->
+			<!-- END CONTENT -->
+
+			<!-- BEGIN MENUBAR-->
+			<div id="menubar" class="menubar-inverse ">
+				<div class="menubar-fixed-panel">
+					<div>
+						<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+					<div class="expanded">
+						<a href="../../html/dashboards/dashboard.html">
+							<span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
+						</a>
+					</div>
+				</div>
+				<div class="menubar-scroll-panel">
+
+					<!--MENU LATERAL-->
+					<ul id="main-menu" class="gui-controls">
+						<li class="active">
+							<a href="../../html/dashboards/dashboard.html" >
+								<div class="gui-icon"><i class="md md-search"></i></div>
+								<span class="title">Pesquisar</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../html/dashboards/dashboard.html" >
+								<div class="gui-icon"><i class="md md-add"></i></div>
+								<span class="title">Novo Processo</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../html/dashboards/dashboard.html" >
+								<div class="gui-icon"><i class="md md-today"></i></div>
+								<span class="title">Calendário</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../html/dashboards/dashboard.html" >
+								<div class="gui-icon"><i class="fa fa-leanpub"></i></div>
+								<span class="title">Agenda</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../html/dashboards/dashboard.html" >
+								<div class="gui-icon"><i class="md md-notifications-none"></i></div>
+								<span class="title">Feed</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../html/dashboards/dashboard.html" >
+								<div class="gui-icon"><i class="md md-close"></i></div>
+								<span class="title">Sair</span>
+							</a>
+						</li>
+					</ul>
+					<!--/MENU LATERAL-->
+
+					<div class="menubar-foot-panel">
+						<small class="no-linebreak hidden-folded">
+							<span class="opacity-75">Copyright &copy; 2016</span> <strong>Sofia Jurídica</strong>
+						</small>
+					</div>
+				</div><!--end .menubar-scroll-panel-->
+			</div><!--end #menubar-->
+			<!-- END MENUBAR -->
+
+			<!-- BEGIN OFFCANVAS RIGHT -->
+			<div class="offcanvas">
+
+				<!-- BEGIN OFFCANVAS SEARCH -->
+				<div id="offcanvas-search" class="offcanvas-pane width-8">
+					<div class="offcanvas-head">
+						<header class="text-primary"><i class="fa fa-leanpub"></i> Agenda</header>
+						<div class="offcanvas-tools">
+							<a class="btn btn-icon-toggle btn-default-light pull-right" data-dismiss="offcanvas">
+								<i class="md md-close"></i>
+							</a>
+						</div>
+					</div>
+					<div class="offcanvas-body no-padding">
+						<ul class="list ">
+							<li class="tile divider-full-bleed">
+								<div class="tile-content">
+									<div class="tile-text"><strong>A</strong></div>
+								</div>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										Alex Nelson
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+
+									<div class="tile-text">
+										Armazem Ltda
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile divider-full-bleed">
+								<div class="tile-content">
+									<div class="tile-text"><strong>J</strong></div>
+								</div>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										JS Distribuidora Ltda
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										João Silva
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile divider-full-bleed">
+								<div class="tile-content">
+									<div class="tile-text"><strong>M</strong></div>
+								</div>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										Marcelo Toyoda
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										Maria Silva
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										Marcos da Costa Oliveira
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile divider-full-bleed">
+								<div class="tile-content">
+									<div class="tile-text"><strong>N</strong></div>
+								</div>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										Nilson Santos
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile divider-full-bleed">
+								<div class="tile-content">
+									<div class="tile-text"><strong>P</strong></div>
+								</div>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										Paulo Silva e Souza
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+							<li class="tile divider-full-bleed">
+								<div class="tile-content">
+									<div class="tile-text"><strong>S</strong></div>
+								</div>
+							</li>
+							<li class="tile">
+								<a class="tile-content ink-reaction" href="#offcanvas-chat" data-toggle="offcanvas" data-backdrop="false">
+									<div class="tile-text">
+										Samuel Aleixo
+										<small>123-123-3210</small>
+										<small>Rua João Alferedo, 256</small>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div><!--end .offcanvas-body -->
+				</div><!--end .offcanvas-pane -->
+				<!-- END OFFCANVAS SEARCH -->
+
+			</div><!--end .offcanvas-->
+			<!-- END OFFCANVAS RIGHT -->
+
+		</div><!--end #base-->
+		<!-- END BASE -->
+
+		<!-- BEGIN JAVASCRIPT -->
+		<script src="js/libs/jquery/jquery-1.11.2.min.js"></script>
+		<script src="js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/libs/bootstrap/bootstrap.min.js"></script>
+		<script src="js/libs/spin.js/spin.min.js"></script>
+		<script src="js/libs/autosize/jquery.autosize.min.js"></script>
+		<script src="js/libs/DataTables/jquery.dataTables.min.js"></script>
+		<script src="js/libs/DataTables/extensions/ColVis/js/dataTables.colVis.min.js"></script>
+		<script src="js/libs/DataTables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+		<script src="js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+		<script src="js/core/source/App.js"></script>
+		<script src="js/core/source/AppNavigation.js"></script>
+		<script src="js/core/source/AppOffcanvas.js"></script>
+		<script src="js/core/source/AppCard.js"></script>
+		<script src="js/core/source/AppForm.js"></script>
+		<script src="js/core/source/AppNavSearch.js"></script>
+		<script src="js/core/source/AppVendor.js"></script>
+		<script src="js/core/demo/Demo.js"></script>
+		<script src="js/core/demo/DemoTableDynamic.js"></script>
+		<!-- END JAVASCRIPT -->
+
+	</body>
+</html>
