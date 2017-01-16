@@ -7976,4 +7976,16 @@ li.L8 {
 .float-right {
 float: right;
 }
-
+/* Fundo Alternativo para botão do Facebook */
+.btn-facebook {
+background-color: #3b5998;
+border-color: #3b5998;
+}
+.btn-facebook i {
+padding-top: 3px
+}
+/* Fundo Alternativo para botão do Facebook */
+.sofia-title {
+font-weight: 300;
+letter-spacing: 2px;
+}
